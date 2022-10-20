@@ -70,6 +70,13 @@ body{
     text-align: center;
 }
 
+#headshot{
+    height:240px;
+    width:240px;
+    object-fit: cover;
+    border-radius:50%;
+}
+
 #projects {
     color: white;
     background-color: #8599a7;
