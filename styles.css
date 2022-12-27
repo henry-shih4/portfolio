@@ -8,6 +8,7 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
+  width: screen;
 }
 
 #navbar {
@@ -248,7 +249,7 @@ body {
 
 footer {
   position: absolute;
-  bottom: 1em;
+  bottom: 0.5em;
 }
 footer a {
   text-decoration: none;
@@ -262,7 +263,11 @@ footer a {
   }
 
   #welcome-section h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
+  }
+  #welcome-section p {
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
