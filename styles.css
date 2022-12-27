@@ -81,7 +81,7 @@ body {
 #tech-section p {
   margin-top: 1em;
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -114,11 +114,12 @@ body {
 }
 
 .tile-container {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: black;
 }
 
 .project-tile {
@@ -130,7 +131,20 @@ body {
   width: 100%;
 }
 
-.flip-card-inner {
+.image-container {
+  max-width: 75%;
+}
+
+.tile img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info {
+  width: 25%;
+}
+
+/* .flip-card-inner {
   display: flex;
   justify-content: center;
   margin-bottom: 0.5em;
@@ -140,27 +154,27 @@ body {
   text-align: center;
   transition: transform 1s;
   transform-style: preserve-3d;
-}
+} */
 
-.project-tile:hover .flip-card-inner {
+/* .project-tile:hover .flip-card-inner {
   transform: rotateY(180deg);
   transition-delay: 250ms;
-}
+} */
 
 /* Position the front and back side */
-.flip-card-front,
+/* .flip-card-front,
 .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-}
+} */
 
 /*  back side */
-.flip-card-back {
+/* .flip-card-back {
   transform: rotateY(180deg);
   transition-delay: 250ms;
-}
+} */
 
 .project-title {
   font-size: 2rem;
@@ -170,7 +184,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, 1fr);
   max-width: 1280px;
   column-gap: 2em;
   row-gap: 2em;
@@ -180,13 +194,6 @@ body {
   justify-items: center;
 }
 
-.grid img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
 .name {
   background-color: rgb(42, 80, 136);
   margin: 0;
@@ -194,12 +201,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 .name a {
   text-decoration: none;
   color: white;
-  width: 100%;
+  width: 25%;
   height: 100%;
   display: flex;
   align-items: center;
