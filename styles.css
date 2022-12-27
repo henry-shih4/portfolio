@@ -144,6 +144,7 @@ body {
 
 .project-tile:hover .flip-card-inner {
   transform: rotateY(180deg);
+  transition-delay: 250ms;
 }
 
 /* Position the front and back side */
@@ -158,6 +159,7 @@ body {
 /*  back side */
 .flip-card-back {
   transform: rotateY(180deg);
+  transition-delay: 250ms;
 }
 
 .project-title {
