@@ -114,8 +114,8 @@ body {
 }
 
 .tile-container {
-  width: 100%;
-  height: max-content;
+  max-width: 100%;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,10 +132,14 @@ body {
 }
 
 .image-container {
-  max-width: 75%;
+  background-color: red;
+  width: 100%;
+  height: 100%;
 }
 
-.tile img {
+.tile-img {
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 10px;
 }
