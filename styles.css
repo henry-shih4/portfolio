@@ -59,6 +59,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
+  width: screenn;
 }
 
 #welcome-section h1 {
@@ -114,71 +115,63 @@ body {
 }
 
 .tile-container {
-  max-width: 100%;
+  width: 100%;
   height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: black;
+  margin-bottom: 1em;
 }
 
 .project-tile {
   display: flex;
   justify-content: center;
   justify-items: center;
-  margin-bottom: 0.5em;
   height: 100%;
   width: 100%;
+  background-color: #574b60;
+  border-radius: 10px;
 }
 
 .image-container {
-  background-color: red;
-  width: 100%;
+  width: 75%;
   height: 100%;
 }
 
 .tile-img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
   border-radius: 10px;
 }
 
 .info {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 25%;
+  background-color: #eae6e5;
 }
 
-/* .flip-card-inner {
+.info img {
+  width: 60px;
+  height: 60px;
+  margin: 0.5em;
+}
+
+.info p {
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+.tech {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-bottom: 0.5em;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-} */
-
-/* .project-tile:hover .flip-card-inner {
-  transform: rotateY(180deg);
-  transition-delay: 250ms;
-} */
-
-/* Position the front and back side */
-/* .flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-} */
-
-/*  back side */
-/* .flip-card-back {
-  transform: rotateY(180deg);
-  transition-delay: 250ms;
-} */
+  align-items: center;
+}
 
 .project-title {
   font-size: 2rem;
@@ -189,10 +182,10 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  max-width: 1280px;
+  max-width: 1400px;
   column-gap: 2em;
   row-gap: 2em;
-  width: 100%;
+  width: 90%;
   margin: auto;
   padding-bottom: 4em;
   justify-items: center;
@@ -206,13 +199,13 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 1em;
+  margin-top: 0.5em;
 }
 
 .name a {
   text-decoration: none;
   color: white;
-  width: 25%;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -289,11 +282,35 @@ body {
 
 footer {
   position: absolute;
-  bottom: 0.5em;
+  bottom: 2em;
 }
+
 footer a {
   text-decoration: none;
   color: black;
+}
+
+@media only screen and (max-width: 760px) {
+  .project-tile {
+    flex-direction: column;
+  }
+
+  .info {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tech {
+    flex-direction: row;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+
+  .tile-container {
+    height: max-content;
+  }
 }
 
 @media only screen and (max-width: 500px) {
